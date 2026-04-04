@@ -264,15 +264,6 @@ export default function App() {
                             className="relative hidden lg:block"
                         >
                             <div className="w-80 h-[28rem] border border-white/10 p-4 grayscale hover:grayscale-0 transition-all duration-700">
-                                <div className="w-full h-full bg-white/5 relative overflow-hidden">
-                                    <img
-                                        src={profile}
-                                        alt="Sanketh Thatikonda"
-                                        className="w-full h-full object-cover opacity-80"
-                                        referrerPolicy="no-referrer"
-                                    />
-                                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
-                                </div>
                             </div>
                             <div className="absolute -bottom-6 -right-6 w-32 h-32 border border-white/20 -z-10" />
                             <div className="absolute -top-6 -left-6 w-32 h-32 border border-white/20 -z-10" />
