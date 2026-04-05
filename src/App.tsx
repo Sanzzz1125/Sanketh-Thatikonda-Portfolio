@@ -192,7 +192,11 @@ export default function App() {
                             transition={{ duration: 0.8, ease: "easeOut" }}
                         >
                             <div className="barcode mb-8 text-base">
-                                04-04-2026
+                                {new Date().toLocaleDateString("en-US", {
+                                    day: "2-digit",
+                                    month: "short",
+                                    year: "numeric",
+                                })}
                             </div>
                             <h1 className="mono-heading text-6xl md:text-8xl lg:text-[11rem] mb-8 leading-none">
                                 SANKETH <br />
