@@ -24,7 +24,7 @@ import {
 } from "lucide-react";
 import { useState, useEffect } from "react";
 import profile from "./assets/profile_pic.jpeg";
-import resume from "./assets/Sanketh_Thatikonda_Resume.pdf";
+import resume from "./assets/resume.pdf";
 
 const PROJECTS = [
     {
