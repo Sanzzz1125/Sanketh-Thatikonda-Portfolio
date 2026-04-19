@@ -53,6 +53,15 @@ const PROJECTS = [
         icon: <Briefcase className="w-5 h-5" />,
     },
     {
+    title: "Campus Reporting System",
+    description:
+        "Full Stack complaint management system with role-based dashboards for students, faculty, workers, and admins. Features JWT auth, MongoDB Atlas, and live deployment on Render.",
+    tech: ["React", "Node.js", "Express", "MongoDB"],
+    github: "https://github.com/Sanzzz1125/Campus-Reporting-System",
+    live: "https://campus-frontend-7ue1.onrender.com/",
+    icon: <GraduationCap className="w-5 h-5" />,
+},
+    {
         title: "Rural Career Guide",
         description:
             "Social impact platform providing stream information and entrance exam details for rural students.",
