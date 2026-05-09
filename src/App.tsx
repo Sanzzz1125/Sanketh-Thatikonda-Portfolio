@@ -42,6 +42,7 @@ const PROJECTS = [
             "Community platform for reuniting owners with lost belongings using a full-stack MERN architecture.",
         tech: ["React", "Node.js", "Express", "MongoDB"],
         github: "https://github.com/Sanzzz1125/Lost_And_Found",
+        live: "https://lost-and-found-1-eum5.onrender.com/",
         icon: <Cpu className="w-5 h-5" />,
     },
     {
@@ -67,6 +68,7 @@ const PROJECTS = [
             "Social impact platform providing stream information and entrance exam details for rural students.",
         tech: ["HTML/CSS", "GitHub Pages"],
         github: "https://github.com/Sanzzz1125/Career-Options",
+        live: "https://sanzzz1125.github.io/Career-Options/",
         icon: <GraduationCap className="w-5 h-5" />,
     },
     {
@@ -106,7 +108,7 @@ const EDUCATION = [
         school: "SR University, Warangal",
         degree: "B.Tech in Computer Science & Engineering",
         period: "2023 — 2027",
-        stats: "9.66 CGPA",
+        stats: "9.68 CGPA",
         details:
             "Core: Data Structures, Operating Systems, DBMS, Design & Analysis of Algorithms.",
     },
