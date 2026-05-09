@@ -27,15 +27,7 @@ import { useState, useEffect } from "react";
 import profile from "./assets/profile_pic.jpeg";
 import resume from "./assets/resume.pdf";
 
-const PROJECTS = [
-    {
-        title: "Digital Library Management",
-        description:
-            "Desktop-based system using Java Swing for browsing, borrowing, and returning books with admin management.",
-        tech: ["Java", "Swing", "MySQL"],
-        github: "https://github.com/Sanzzz1125/Digital-Library-Management-System",
-        icon: <Layers className="w-5 h-5" />,
-    },
+const PROJECTS = [    
     {
         title: "Lost And Found Portal",
         description:
@@ -46,6 +38,15 @@ const PROJECTS = [
         icon: <Cpu className="w-5 h-5" />,
     },
     {
+    title: "Campus Reporting System",
+    description:
+        "Full Stack complaint management system with role-based dashboards for students, faculty, workers, and admins. Features JWT auth, MongoDB Atlas, and live deployment on Render.",
+    tech: ["React", "Node.js", "Express", "MongoDB"],
+    github: "https://github.com/Sanzzz1125/Campus-Reporting-System",
+    live: "https://campus-frontend-7ue1.onrender.com/",
+    icon: <GraduationCap className="w-5 h-5" />,
+    },
+    {
         title: "Job Tracker Pro",
         description:
             "Full Stack system with CRUD functionality, dashboard analytics, and MVC architecture.",
@@ -54,14 +55,13 @@ const PROJECTS = [
         icon: <Briefcase className="w-5 h-5" />,
     },
     {
-    title: "Campus Reporting System",
-    description:
-        "Full Stack complaint management system with role-based dashboards for students, faculty, workers, and admins. Features JWT auth, MongoDB Atlas, and live deployment on Render.",
-    tech: ["React", "Node.js", "Express", "MongoDB"],
-    github: "https://github.com/Sanzzz1125/Campus-Reporting-System",
-    live: "https://campus-frontend-7ue1.onrender.com/",
-    icon: <GraduationCap className="w-5 h-5" />,
-},
+        title: "Digital Library Management",
+        description:
+            "Desktop-based system using Java Swing for browsing, borrowing, and returning books with admin management.",
+        tech: ["Java", "Swing", "MySQL"],
+        github: "https://github.com/Sanzzz1125/Digital-Library-Management-System",
+        icon: <Layers className="w-5 h-5" />,
+    },
     {
         title: "Rural Career Guide",
         description:
@@ -296,7 +296,7 @@ export default function App() {
                             <span className="text-sm text-white/40 tracking-[0.4em] mb-2 uppercase">
                                 CGPA
                             </span>
-                            <span className="mono-heading text-5xl">9.66</span>
+                            <span className="mono-heading text-5xl">9.68</span>
                         </div>
                         <div className="flex flex-col">
                             <span className="text-sm text-white/40 tracking-[0.4em] mb-2 uppercase">
