@@ -27,7 +27,20 @@ import { useState, useEffect } from "react";
 import profile from "./assets/profile_pic.jpeg";
 import resume from "./assets/resume.pdf";
 
-const PROJECTS = [    
+const PROJECTS = [
+    {
+        title: "SyncLeetX",
+        description:
+            "Chrome Extension that auto-syncs accepted LeetCode submissions to GitHub with README generation and difficulty-wise organization.",
+        tech: [
+            "JavaScript",
+            "Chrome Extension",
+            "Manifest V3",
+            "GitHub API",
+        ],
+        github: "https://github.com/Sanzzz1125/SyncLeetX",
+        icon: <Code className="w-5 h-5" />,
+    },
     {
         title: "Lost And Found Portal",
         description:
@@ -78,14 +91,6 @@ const PROJECTS = [
         tech: ["C Language", "DSA"],
         github: "https://github.com/Sanzzz1125/Shoe-mart-billing-system",
         icon: <Globe className="w-5 h-5" />,
-    },
-    {
-        title: "Tic-Tac-Toe",
-        description:
-            "Classic game developed to master JavaScript fundamentals and interactive DOM manipulation.",
-        tech: ["JavaScript", "HTML", "CSS"],
-        github: "https://github.com/Sanzzz1125/Tic-Tac-Toe",
-        icon: <Terminal className="w-5 h-5" />,
     },
 ];
 
@@ -308,7 +313,7 @@ export default function App() {
                             <span className="text-sm text-white/40 tracking-[0.4em] mb-2 uppercase">
                                 Projects
                             </span>
-                            <span className="mono-heading text-5xl">06+</span>
+                            <span className="mono-heading text-5xl">07+</span>
                         </div>
                         <div className="flex flex-col">
                             <span className="text-sm text-white/40 tracking-[0.4em] mb-2 uppercase">
