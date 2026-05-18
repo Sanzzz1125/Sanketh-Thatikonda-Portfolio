@@ -29,18 +29,20 @@ import resume from "./assets/resume.pdf";
 
 const PROJECTS = [
     {
-        title: "SyncLeetX",
-        description:
-            "Chrome Extension that auto-syncs accepted LeetCode submissions to GitHub with README generation and difficulty-wise organization.",
-        tech: [
-            "JavaScript",
-            "Chrome Extension",
-            "Manifest V3",
-            "GitHub API",
-        ],
-        github: "https://github.com/Sanzzz1125/SyncLeetX",
-        icon: <Code className="w-5 h-5" />,
-    },
+    title: "SyncLeetX",
+    description:
+        "A modern Chrome Extension that automatically syncs accepted LeetCode and GeeksForGeeks solutions to GitHub with live analytics, recent solved tracking, auto-generated READMEs, clickable problem history, and difficulty-wise repository organization.",
+    tech: [
+        "JavaScript",
+        "Chrome Extension",
+        "Manifest V3",
+        "GitHub REST API",
+        "LeetCode GraphQL",
+        "Chrome Storage API",
+    ],
+    github: "https://github.com/Sanzzz1125/SyncLeetX",
+    icon: <Code className="w-5 h-5" />,
+},
     {
         title: "Lost And Found Portal",
         description:
