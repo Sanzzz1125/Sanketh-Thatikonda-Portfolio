@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Libre+Barcode+39+Text&family=Space+Mono:wght@400;700&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Barcode+39+Text&family=Space+Mono:wght@400;700&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
 @import "tailwindcss";
 
 @theme {
@@ -11,16 +11,16 @@
 
 @layer base {
   body {
-    @apply bg-bg-dark text-slate-300 font-sans antialiased text-[1.1rem] selection:bg-white selection:text-black;
+    @apply bg-bg-dark text-slate-300 font-sans antialiased text-[1rem] selection:bg-white selection:text-black;
+  }
+
+  * {
+    box-sizing: border-box;
   }
 }
 
 .glass {
   @apply bg-white/5 backdrop-blur-md border border-white/10;
-}
-
-.text-gradient {
-  @apply bg-gradient-to-r from-white to-slate-500 bg-clip-text text-transparent;
 }
 
 .barcode {
@@ -42,7 +42,7 @@
   width: 100%;
   height: 100%;
   z-index: -1;
-  background: 
+  background:
     radial-gradient(at 0% 0%, rgba(255, 255, 255, 0.05) 0px, transparent 50%),
     radial-gradient(at 100% 100%, rgba(255, 255, 255, 0.05) 0px, transparent 50%);
 }
@@ -56,5 +56,15 @@
 }
 
 .custom-scrollbar::-webkit-scrollbar-thumb {
-  @apply bg-white/20 rounded-full hover:bg-white/40 transition-colors;
+  @apply bg-white/20 rounded-full;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  @apply bg-white/40;
+}
+
+/* Prevent horizontal overflow on all screen sizes */
+html, body {
+  overflow-x: hidden;
+  max-width: 100vw;
 }
