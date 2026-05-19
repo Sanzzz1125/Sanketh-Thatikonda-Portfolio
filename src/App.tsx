@@ -317,7 +317,7 @@ export default function App() {
                     >
                         {[
                             { label: "CGPA", value: "9.68" },
-                            { label: "LeetCode", value: "300+" },
+                            { label: "LeetCode", value: "400+" },
                             { label: "Projects", value: "07+" },
                             { label: "Experience", value: "01" },
                         ].map((stat) => (
