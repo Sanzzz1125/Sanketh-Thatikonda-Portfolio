@@ -21,7 +21,7 @@ const PROJECTS = [
     {
         title: "SyncLeetX",
         description:
-            "Real-time Chrome extension syncing accepted LeetCode & GeeksForGeeks solutions via GraphQL + GitHub REST API. Auto-generates READMEs, tracks recent solves, and organizes repos by difficulty.",
+            "Chrome extension that auto-syncs accepted LeetCode & GeeksForGeeks solutions to GitHub with live analytics, streak tracking, badges, heatmaps, and difficulty-wise repository organization.",
         tech: [
             "JavaScript",
             "Chrome Extension",
