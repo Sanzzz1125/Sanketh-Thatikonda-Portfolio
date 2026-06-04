@@ -13,6 +13,7 @@ import {
     Layers,
     Menu,
     X,
+    BookOpen,
 } from "lucide-react";
 import { useState, useEffect } from "react";
 import resume from "./assets/resume.pdf";
