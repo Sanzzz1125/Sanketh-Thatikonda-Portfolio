@@ -19,6 +19,23 @@ import resume from "./assets/resume.pdf";
 
 const PROJECTS = [
     {
+        title: "FullStack Compass",
+        description:
+            "A comprehensive MERN stack learning platform covering HTML to deployment. Features deep-dive content, interactive practice games, curated resources, full app clone blueprints, a custom scrollbar TOC, and dark/light mode.",
+        tech: [
+            "React",
+            "Vite",
+            "Node.js",
+            "Express",
+            "MongoDB",
+            "React Router",
+        ],
+        github: "https://github.com/Sanzzz1125/fullStackCompass",
+        live: "https://www.fullstackcompass.in",
+        featured: true,
+        icon: <BookOpen className="w-5 h-5" />,
+    },
+    {
         title: "SyncLeetX",
         description:
             "Chrome extension that auto-syncs accepted LeetCode & GeeksForGeeks solutions to GitHub with live analytics, streak tracking, badges, heatmaps, and difficulty-wise repository organization.",
