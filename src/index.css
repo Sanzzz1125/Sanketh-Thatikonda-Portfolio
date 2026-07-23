@@ -1,0 +1,299 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Barcode+39+Text&family=Space+Mono:wght@400;700&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Montserrat", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "Space Mono", monospace;
+  --font-barcode: "Libre Barcode 39 Text", cursive;
+  --color-bg-dark: #030304;
+  --color-accent: #ffffff;
+}
+
+:root {
+  --accent-cyan: #5ef2e0;
+  --accent-violet: #9b6bff;
+  --accent-magenta: #ff3d9a;
+  --accent-gradient: linear-gradient(100deg, var(--accent-cyan), var(--accent-violet));
+}
+
+@layer base {
+  body {
+    @apply bg-bg-dark text-slate-300 font-sans antialiased text-[1rem] selection:bg-white selection:text-black;
+    background: var(--color-bg-dark);
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  ::-moz-selection {
+    background: var(--accent-violet);
+    color: #fff;
+  }
+
+  ::selection {
+    background: var(--accent-violet);
+    color: #fff;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--accent-cyan);
+    outline-offset: 3px;
+  }
+}
+
+/* ---------- cursor ---------- */
+@media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
+  body,
+  a,
+  button {
+    cursor: none;
+  }
+}
+
+/* ---------- type utilities ---------- */
+.glass {
+  @apply bg-white/5 backdrop-blur-md border border-white/10;
+}
+
+.barcode {
+  @apply font-mono text-sm tracking-[0.3em] text-white/40 uppercase;
+}
+
+.barcode-vertical {
+  @apply font-mono text-[10px] tracking-[0.2em] text-white/40 uppercase;
+}
+
+.mono-heading {
+  @apply font-mono uppercase tracking-tighter font-bold;
+}
+
+.holo-text {
+  background: var(--accent-gradient);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: holo-shift 7s linear infinite;
+}
+
+@keyframes holo-shift {
+  to {
+    background-position: 200% center;
+  }
+}
+
+/* ---------- ambient grain overlay ---------- */
+.grain-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 150;
+  pointer-events: none;
+  opacity: 0.045;
+  mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-size: 140px 140px;
+}
+
+.vignette-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background: radial-gradient(
+    ellipse at 50% 40%,
+    transparent 45%,
+    rgba(0, 0, 0, 0.55) 100%
+  );
+}
+
+/* ---------- tilt project cards ---------- */
+.tilt-card {
+  transform-style: preserve-3d;
+  background: rgba(255, 255, 255, 0.025);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  transition:
+    border-color 0.4s ease,
+    box-shadow 0.5s ease,
+    background 0.4s ease;
+  will-change: transform;
+}
+
+.tilt-card:hover {
+  border-color: rgba(255, 255, 255, 0.22);
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 40px 80px -35px rgba(155, 107, 255, 0.4);
+}
+
+.tilt-sheen {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  background: radial-gradient(
+    circle at var(--mx, 50%) var(--my, 50%),
+    rgba(255, 255, 255, 0.14),
+    transparent 45%
+  );
+}
+
+.tilt-card:hover .tilt-sheen {
+  opacity: 1;
+}
+
+/* ---------- skills orb ---------- */
+.skills-orb-wrap {
+  perspective: 1100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 420px;
+  touch-action: none;
+}
+
+.skills-orb {
+  position: relative;
+  width: 1px;
+  height: 1px;
+  transform-style: preserve-3d;
+  cursor: grab;
+}
+
+.skills-orb:active {
+  cursor: grabbing;
+}
+
+.orb-anchor {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform-style: preserve-3d;
+}
+
+.orb-item {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(-50%, -50%);
+  width: 116px;
+  padding: 9px 10px;
+  border: 1px solid;
+  border-radius: 2px;
+  text-align: center;
+  font-size: 11px;
+  letter-spacing: 0.05em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  background: rgba(3, 3, 4, 0.6);
+  backdrop-filter: blur(6px);
+  user-select: none;
+}
+
+/* ---------- timeline rail ---------- */
+.timeline-rail {
+  position: relative;
+  padding-left: 1.75rem;
+}
+
+.timeline-rail::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.4rem;
+  bottom: 0.4rem;
+  width: 1px;
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.timeline-fill {
+  position: absolute;
+  left: 0;
+  top: 0.4rem;
+  width: 1px;
+  height: 100%;
+  background: var(--accent-gradient);
+  transform: scaleY(0);
+  transform-origin: top;
+}
+
+.timeline-dot {
+  position: absolute;
+  left: -3px;
+  top: 0.3rem;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--accent-cyan);
+  box-shadow: 0 0 12px 2px var(--accent-cyan);
+}
+
+/* ---------- marquee ---------- */
+.marquee-wrap {
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.marquee-track {
+  display: inline-flex;
+  width: max-content;
+  animation: marquee 22s linear infinite;
+}
+
+@keyframes marquee {
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* ---------- scrollbar ---------- */
+html::-webkit-scrollbar,
+.custom-scrollbar::-webkit-scrollbar {
+  width: 4px;
+}
+
+html::-webkit-scrollbar-track,
+.custom-scrollbar::-webkit-scrollbar-track {
+  @apply bg-transparent;
+}
+
+html::-webkit-scrollbar-thumb,
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.55);
+  border-radius: 999px;
+}
+
+/* ---------- lenis ---------- */
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+/* Prevent horizontal overflow on all screen sizes */
+html,
+body {
+  overflow-x: hidden;
+  max-width: 100vw;
+}
+
+/* ---------- reduced motion safety net ---------- */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
